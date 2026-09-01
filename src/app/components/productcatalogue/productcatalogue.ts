@@ -25,7 +25,7 @@ export class ProductCatalogue implements OnInit {
   }
 
   loadProducts(){
-    this.productService.showProducts().subscribe({
+    this.productService.getProducts().subscribe({
       next:(serviceResponse)=>{
         this.products.set(serviceResponse)
       },

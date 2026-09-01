@@ -11,7 +11,7 @@ export class Productservice {
     addProductUrl='http://localhost:8080/products/addProduct';
     constructor(private http:HttpClient){}
 
-    showProducts():Observable<Product[]>{
+    getProducts():Observable<Product[]>{
        return  this.http.get<Product[]>(this.showProductUrl)
     }
 

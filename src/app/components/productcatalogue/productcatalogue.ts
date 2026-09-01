@@ -28,7 +28,8 @@ export class ProductCatalogue implements OnInit {
     this.productService.showProducts().subscribe({
       next:(serviceResponse)=>{
         this.products.set(serviceResponse)
-      }
+      },
+      error:(serviceResponse)=>console.log('product list could not be loaded',serviceResponse)
     })
   }
 
